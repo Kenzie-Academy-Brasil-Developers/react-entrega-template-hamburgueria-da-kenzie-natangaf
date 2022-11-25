@@ -25,6 +25,7 @@ function App() {
       <PageHome
         products={products}
         filteredProducts={filteredProducts}
+        setFilteredProducts={setFilteredProducts}
         currentSale={currentSale}
         setCurrentSale={setCurrentSale}
         cart={cart}
