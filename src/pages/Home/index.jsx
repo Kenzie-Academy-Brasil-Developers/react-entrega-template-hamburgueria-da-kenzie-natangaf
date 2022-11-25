@@ -6,6 +6,7 @@ import { StyleMain } from "./style";
 export function PageHome({
   products,
   filteredProducts,
+  setFilteredProducts,
   currentSale,
   setCurrentSale,
   cart,
@@ -13,7 +14,7 @@ export function PageHome({
 }) {
   return (
     <>
-      <Header />
+      <Header products={products} setFilteredProducts={setFilteredProducts} />
       <StyleMain>
         <ProductsList
           filteredProducts={filteredProducts}

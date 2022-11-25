@@ -1,7 +1,7 @@
 import { StyledTypography } from "../BaseTypography/style";
 import { Form } from "./Form";
 import { StyledHeader } from "./style";
-export function Header() {
+export function Header({products , setFilteredProducts}) {
   return (
     <StyledHeader>
       <div>
@@ -9,7 +9,7 @@ export function Header() {
           {" "}
           Burger
         </StyledTypography>
-        <Form></Form>
+        <Form products={products} setFilteredProducts={setFilteredProducts}></Form>
       </div>
     </StyledHeader>
   );
