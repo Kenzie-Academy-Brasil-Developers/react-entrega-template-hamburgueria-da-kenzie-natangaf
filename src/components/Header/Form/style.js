@@ -9,24 +9,25 @@ export const StyledForm = styled.form`
   align-items: center;
   padding: 0px 10px 0px 15px;
   align-items: center;
-  background: #e0e0e0;
+  background: var(--Color-grey-20);
   /* grey-100 */
-  border: 2px solid #e0e0e0;
+  border: 2px solid
+    ${({ focus }) => (focus ? "var(--Color-gray-100)" : "var(--Color-grey-20)")};
   border-radius: 8px;
-  :hover {
-    border: 2px solid #333333;
+  button {
+    height: 90%;
   }
+
   input {
     height: 70%;
     width: 70%;
     /* grey-100 */
-    background: #e0e0e0;
+    background: var(--Color-grey-20);
     /* grey-100 */
-    border: 2px solid transparent;
-    border-radius: 8px;
+    outline: none;
+    border: transparent;
   }
-  input:focus {
-    border: 2px solid transparent;
-    color: #828282;
+  @media (min-width: 700px) {
+    width: 30%;
   }
 `;

@@ -1,31 +1,30 @@
 import styled from "styled-components";
 
-export const StlyesCart= styled.aside`
-  list-style: none;
-  min-width: 300px;
-  height: 350px;
-  background: #ffffff;
-  /* grey-100 */
-  border: 2px solid #e0e0e0;
+export const StlyesCart = styled.aside`
+  width: 100%;
+  height: 100%;
+  background: var(--Color-primary);
+  color: var(--Color-grey-0);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-
-  :hover {
-    border: 2px solid #333333;
-  }
-  img {
-    margin: 0 auto;
-    max-height: 40%;
-  }
-  div {
+  span {
+    padding: 22px;
     margin: 0 auto;
     width: 90%;
   }
-  h3 {
-    color: #27ae60;
+  div > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   button {
-    width: 50%;
+    height: 48px;
+    width: 100%;
+  }
+  @media (min-width: 700px) {
+    margin: 30px 0;
+    width: 30%;
   }
 `;
