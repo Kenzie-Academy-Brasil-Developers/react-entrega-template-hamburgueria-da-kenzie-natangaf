@@ -15,7 +15,6 @@ export function Form({ products, setFilteredProducts }) {
         element.category.toLowerCase().includes(sheradTextToLower) ||
         element.price.toLocaleString().includes(sheradTextToLower)
     );
-    console.log(sheradProdct);
     setFilteredProducts(sheradProdct);
   }
   return (
