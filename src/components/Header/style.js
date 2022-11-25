@@ -15,6 +15,9 @@ export const StyledHeader = styled.header`
     align-items: flex-start;
     gap: 10px;
   }
+  h1 > span {
+    color: #1f4e70;
+  }
   @media (min-width: 700px) {
     div {
       margin: 0 auto;
