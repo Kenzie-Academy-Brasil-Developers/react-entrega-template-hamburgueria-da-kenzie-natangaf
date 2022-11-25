@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const StlyesProduct= styled.li`
+export const StlyesProduct = styled.li`
   list-style: none;
   min-width: 300px;
   height: 350px;
   background: var(--Color-grey-0);
   /* grey-100 */
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--Color-grey-20);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -14,9 +14,22 @@ export const StlyesProduct= styled.li`
   :hover {
     border: 2px solid var(--Color-gray-100);
   }
-  img {
+  figure {
+    background-color: var(--Color-grey-20);
+    width: 100%;
     margin: 0 auto;
     max-height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  figure > img {
+    transition: ease-in 0.5s;
+    max-height: 90%;
+  }
+  figure:hover > img {
+    transition: ease-out 0.5s;
+    max-height: 130%;
   }
   div {
     height: 60%;

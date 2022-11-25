@@ -15,5 +15,6 @@ export const StlyesList = styled.ul`
     flex-wrap: wrap;
     align-items: center;
     gap: 25px;
+    overflow-x: hidden;
   }
 `;

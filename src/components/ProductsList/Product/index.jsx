@@ -17,7 +17,9 @@ export function Product({ SetCart, product, currentSale, setCurrentSale }) {
 
   return (
     <StlyesProduct>
-      <img src={product.img} alt="" />
+      <figure>
+        <img src={product.img} alt="" />
+      </figure>
       <div>
         <StyledTypography tag="h2" classText="Heading3">
           {product.name}

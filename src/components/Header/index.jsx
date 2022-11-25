@@ -5,8 +5,7 @@ export function Header({products , setFilteredProducts}) {
   return (
     <StyledHeader>
       <div>
-        <StyledTypography tag="h1" classText="Heading3">
-          {" "}
+        <StyledTypography tag="h1" classText="Heading1">
           Burger
         </StyledTypography>
         <Form products={products} setFilteredProducts={setFilteredProducts}></Form>

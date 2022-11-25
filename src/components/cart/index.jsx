@@ -2,23 +2,22 @@ import { StlyesCart } from "./style";
 import { StyledTypography } from "../BaseTypography/style";
 import { ProductsListCart } from "./ListCart/";
 import { StyledButtons } from "../../Styles/Buttons";
-import { useState } from "react";
 import { CartEmpty } from "./CartEmpty";
 
 export function MyCart({ currentSale, setCurrentSale, cart, SetCart }) {
   function ContValue() {
-    const values = currentSale.map((element) => element.price);
+    const values = currentSale.map((element) =>  element.price * element.quant);
     const value = values.reduce((valueOne, valueTwo) => valueOne + valueTwo, 0);
     return value;
   }
 
   return (
     <StlyesCart>
-      <span>
+      <div>
         <StyledTypography tag="h2" classText="Heading3">
           Carrinho de Compras
         </StyledTypography>
-      </span>
+      </div>
       {cart ? (
         <>
           <ProductsListCart
@@ -26,24 +25,23 @@ export function MyCart({ currentSale, setCurrentSale, cart, SetCart }) {
             setCurrentSale={setCurrentSale}
             SetCart={SetCart}
           />
-          <div>
-            <div>
+          <section>
               <StyledTypography tag="p" classText="Body600">
                 Total
-              </StyledTypography>
-              <StyledTypography tag="p" classText="Body600">
+              <span>
                 $ {ContValue()}
+              </span>
               </StyledTypography>
-            </div>
             <StyledButtons
-              nameButtons="bntOne"
+              nameButtons="bntTwo"
               onClick={() => {
                 setCurrentSale([]);
+                SetCart(false)
               }}
             >
               Remover todos os Itens
             </StyledButtons>
-          </div>
+          </section>
         </>
       ) : (
         <>

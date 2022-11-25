@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
+  padding: 20px 0;
   width: 100vw;
   height: 100%;
+  background-color: var(--Color-grey-20);
   div {
     margin: 0 auto;
     width: 80%;
@@ -14,11 +16,11 @@ export const StyledHeader = styled.header`
     gap: 10px;
   }
   @media (min-width: 700px) {
-   div{
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-   }
+    div {
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 `;

@@ -7,7 +7,7 @@ export function CartEmpty() {
        <StyledTypography tag="h2" classText="Heading3">
           Sua sacola está vazia
         </StyledTypography>
-        <StyledTypography tag="p" classText="Body">
+        <StyledTypography tag="h4" classText="Body">
           Sua sacola está vazia
         </StyledTypography>
     </StlyesCartEmpty>

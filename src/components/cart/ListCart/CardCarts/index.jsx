@@ -18,7 +18,9 @@ export function CardCarts({ product, currentSale, setCurrentSale, SetCart }) {
   }
   return (
     <StlyesProduct>
-      <img src={product.img} alt="" />
+      <figure>
+        <img src={product.img} alt="" />
+      </figure>
       <div>
         <StyledTypography tag="h2" classText="Heading3">
           {product.name}
@@ -26,18 +28,20 @@ export function CardCarts({ product, currentSale, setCurrentSale, SetCart }) {
         <StyledTypography tag="h4" classText="Caption">
           {product.category}
         </StyledTypography>
+      </div>
+      <article>
+        <StyledButtons
+          nameButtons="bntTree"
+          onClick={() => {
+            removeCart();
+          }}
+        >
+          Remover
+        </StyledButtons>
         <StyledTypography tag="h2" classText="Heading3">
           {product.quant}
         </StyledTypography>
-      </div>
-      <StyledButtons
-        nameButtons="bntTree"
-        onClick={() => {
-          removeCart();
-        }}
-      >
-        Remover
-      </StyledButtons>
+      </article>
     </StlyesProduct>
   );
 }

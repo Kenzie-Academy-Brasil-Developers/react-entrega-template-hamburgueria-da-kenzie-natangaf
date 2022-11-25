@@ -9,10 +9,9 @@ export const StyledForm = styled.form`
   align-items: center;
   padding: 0px 10px 0px 15px;
   align-items: center;
-  background: var(--Color-grey-20);
-  /* grey-100 */
+  background: var(--Color-grey-0);
   border: 2px solid
-    ${({ focus }) => (focus ? "var(--Color-gray-100)" : "var(--Color-grey-20)")};
+    ${({ focus }) => (focus ? "var(--Color-gray-100)" : "var(--Color-grey-50)")};
   border-radius: 8px;
   button {
     height: 90%;
@@ -21,9 +20,7 @@ export const StyledForm = styled.form`
   input {
     height: 70%;
     width: 70%;
-    /* grey-100 */
-    background: var(--Color-grey-20);
-    /* grey-100 */
+    background: var(--Color-grey-0);
     outline: none;
     border: transparent;
   }

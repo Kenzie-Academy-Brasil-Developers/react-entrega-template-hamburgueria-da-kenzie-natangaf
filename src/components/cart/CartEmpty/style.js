@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StlyesCartEmpty = styled.div`
+export const StlyesCartEmpty = styled.article`
   width: 100%;
   height: 150px;
   color: var(--Color-grey-50);
@@ -8,7 +8,7 @@ export const StlyesCartEmpty = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   gap: 10px;
   padding: 10px 0;
   h2{
