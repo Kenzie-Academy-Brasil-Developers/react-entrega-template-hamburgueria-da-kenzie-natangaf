@@ -1,14 +1,14 @@
-import "./App.css";
 import { useEffect, useState } from "react";
 import { getItens } from "./services/getItens";
-import { Header } from "./components/Header";
-import { ProductsList } from "./components/ProductsList/";
-import { MyCart } from "./components/cart";
+import { PageHome } from "./pages/Home/index.jsx";
+import { GlobalStyled } from "./Styles/GlobalStyled";
+import { ResetCSS } from "./Styles/ResetCSS";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [currentSale, setCurrentSale] = useState([]);
+  const [cart, SetCart] = useState(false);
 
   useEffect(() => {
     async function get() {
@@ -20,9 +20,16 @@ function App() {
   }, []);
   return (
     <div className="container">
-      <Header />
-      <ProductsList filteredProducts={filteredProducts} setCurrentSale={setCurrentSale} />
-      <MyCart currentSale={currentSale}></MyCart>
+      <ResetCSS />
+      <GlobalStyled />
+      <PageHome
+        products={products}
+        filteredProducts={filteredProducts}
+        currentSale={currentSale}
+        setCurrentSale={setCurrentSale}
+        cart={cart}
+        SetCart={SetCart}
+      />
     </div>
   );
 }

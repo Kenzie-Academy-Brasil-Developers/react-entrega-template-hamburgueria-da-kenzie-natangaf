@@ -9,4 +9,11 @@ export const StlyesList = styled.ul`
   align-items: center;
   gap: 25px;
   overflow-x: scroll;
+  @media (min-width: 700px) {
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+  }
 `;

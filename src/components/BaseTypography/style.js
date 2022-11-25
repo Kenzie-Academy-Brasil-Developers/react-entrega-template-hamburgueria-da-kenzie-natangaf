@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { BaseTypography } from ".";
 
 export const StyledTypography = styled(BaseTypography)`
+  margin: 0;
   ${({ classText }) => {
     switch (classText) {
       case "Heading1":

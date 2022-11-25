@@ -4,7 +4,7 @@ export const StlyesProduct= styled.li`
   list-style: none;
   min-width: 300px;
   height: 350px;
-  background: #ffffff;
+  background: var(--Color-grey-0);
   /* grey-100 */
   border: 2px solid #e0e0e0;
   border-radius: 5px;
@@ -12,20 +12,25 @@ export const StlyesProduct= styled.li`
   flex-direction: column;
 
   :hover {
-    border: 2px solid #333333;
+    border: 2px solid var(--Color-gray-100);
   }
   img {
     margin: 0 auto;
     max-height: 40%;
   }
   div {
-    margin: 0 auto;
+    height: 60%;
     width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   h3 {
-    color: #27ae60;
+    color: var(--Color-primary);
   }
   button {
+    height: 48px;
     width: 50%;
   }
 `;

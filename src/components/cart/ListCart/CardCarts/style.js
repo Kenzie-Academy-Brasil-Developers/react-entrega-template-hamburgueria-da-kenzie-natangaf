@@ -2,30 +2,35 @@ import styled from "styled-components";
 
 export const StlyesProduct= styled.li`
   list-style: none;
-  min-width: 300px;
-  height: 350px;
-  background: #ffffff;
+  width: 90%;
+  height: 100px;
+  background: var(--Color-grey-0);
   /* grey-100 */
-  border: 2px solid #e0e0e0;
+  border: 2px solid var(--Color-grey-20);
   border-radius: 5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
 
   :hover {
-    border: 2px solid #333333;
+    border: 2px solid var(--Color-gray-100);
   }
   img {
+    background-color: var(--Color-grey-20);
     margin: 0 auto;
-    max-height: 40%;
+    height: 100%;
   }
   div {
+    color: black;
+    width: 55%;
+    height: 100%;
     margin: 0 auto;
-    width: 90%;
-  }
-  h3 {
-    color: #27ae60;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
   button {
-    width: 50%;
+    height: 60px;
+    width: 25%;
   }
 `;

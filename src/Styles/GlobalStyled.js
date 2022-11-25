@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyled = createGlobalStyle`
 :root{
   --Color-primary:#27AE60;
   --Color-primary-50:#93D7AF;
@@ -11,7 +13,10 @@
   --Color-Negative:#E60000;
   --Color-Warning:#FFCD07;
   --Color-Sucess:#168821;
-  --Color-Information:#155BCB;
-
-  font-family: 'Inter', sans-serif;
+--Color-Information:#155BCB;
 }
+  body{
+    font-family: 'Inter', sans-serif;
+
+  }
+`;

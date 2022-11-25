@@ -1,8 +1,21 @@
+import { StyledButtons } from "../../../../Styles/Buttons";
 import { StyledTypography } from "../../../BaseTypography/style";
-import { Button } from "../../../buttons/";
 import { StlyesProduct } from "./style";
-export function CardCarts({ product }) {
-  console.log(product);
+
+export function CardCarts({ product, currentSale, setCurrentSale, SetCart }) {
+  function removeCart() {
+    const item = currentSale.find((item) => item.id == product.id);
+    const newValue = currentSale.filter((item) => item.id !== product.id);
+    if (item.quant > 1) {
+      item.quant = item.quant - 1;
+      setCurrentSale([...newValue, item]);
+    } else {
+      setCurrentSale(newValue);
+      if (newValue.length == 0) {
+        SetCart(false);
+      }
+    }
+  }
   return (
     <StlyesProduct>
       <img src={product.img} alt="" />
@@ -13,11 +26,18 @@ export function CardCarts({ product }) {
         <StyledTypography tag="h4" classText="Caption">
           {product.category}
         </StyledTypography>
-        <StyledTypography tag="h3" classText="Body600">
-          $ {product.price},00{" "}
+        <StyledTypography tag="h2" classText="Heading3">
+          {product.quant}
         </StyledTypography>
-        <Button nameButtons="bntOne">Adicionar</Button>
       </div>
+      <StyledButtons
+        nameButtons="bntTree"
+        onClick={() => {
+          removeCart();
+        }}
+      >
+        Remover
+      </StyledButtons>
     </StlyesProduct>
   );
 }

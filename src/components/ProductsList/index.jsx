@@ -1,11 +1,12 @@
 import { Product } from "./Product/";
 import { StlyesList } from "./style";
 
-export function ProductsList({ filteredProducts ,setCurrentSale }) {
+export function ProductsList({SetCart, filteredProducts ,currentSale,setCurrentSale }) {
   return (
     <StlyesList>
       {filteredProducts.map((product) => 
-        <Product product={product} key={product.id}setCurrentSale={setCurrentSale}></Product>
+        <Product 
+        SetCart={SetCart} product={product} key={product.id}setCurrentSale={setCurrentSale} currentSale={currentSale}></Product>
       )}
     </StlyesList>
   );
